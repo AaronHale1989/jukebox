@@ -1,0 +1,70 @@
+
+#jukebox {
+	position:relative;
+	top:5px;
+	left:400px;
+}
+
+h2 {
+	position:relative;
+	left:408px;
+	font-family:courier new;
+}
+
+h5 {
+	font-family:courier new;
+}
+
+button {
+	font-family:courier new;
+}
+
+#timer{
+	position:relative;
+	left:445px;
+	/*border:2px solid;*/
+	width:90px;
+	height:20px;
+}
+
+#tracklist{
+	display:inline-block;
+	margin:0;
+	padding:0;
+	float:left;
+}
+#song1 {
+    border: none;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+#song1:hover {
+	 background-color: blue;
+}
+
+#song2 {
+    border: none;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+#song2:hover {
+	 background-color: green;
+}
+
+#song3 {
+    border: none;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+#song3:hover {
+	 background-color: red;
+}
