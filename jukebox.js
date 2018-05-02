@@ -3,6 +3,7 @@ var play = document.getElementById("play");
 var pause = document.getElementById("pause");
 var load = document.getElementById("load");
 var skip = document.getElementById("skip");
+var random = document.getElementById("random")
 
 var song1 = document.getElementById("song1");
 var song2 = document.getElementById("song2");
@@ -22,23 +23,33 @@ class Jukebox{
 	pauseSong(){
 		songList[currentSong].pause();
 	}
+
+	stopSong(){
+		songList[currentSong].pause();
+		songList[currentSong].currentTime = 0.0;
+	}
+
 	loadSong1(){
 		songList[currentSong].pause();
+		songList[currentSong].currentTime = 0.0;
 		currentSong = 0;
 		songList[0].play();
 	}
 	loadSong2(){
 		songList[currentSong].pause();
+		songList[currentSong].currentTime = 0.0;
 		currentSong = 1;
 		songList[1].play();
 	}
 	loadSong3(){
 		songList[currentSong].pause();
+		songList[currentSong].currentTime = 0.0;
 		currentSong = 2;
 		songList[2].play();
 	}
 	skipSong(){
 		songList[currentSong].pause();
+		songList[currentSong].currentTime = 0.0;
 		if(currentSong === songList.length -1){
 			currentSong = 0;
 			songList[currentSong].play();
@@ -49,6 +60,13 @@ class Jukebox{
 		}
 		
 		
+	}
+
+	randomSong(){
+		songList[currentSong].pause();
+		songList[currentSong].currentTime = 0.0;
+		currentSong = (Math.floor(Math.random()*3));
+		songList[currentSong].play();
 	}
 	
 }
@@ -157,6 +175,10 @@ song2.addEventListener("click",function(){
 
 song3.addEventListener("click",function(){
 	jukeBox1.loadSong3();
+})
+
+random.addEventListener("click",function(){
+	jukeBox1.randomSong();
 })
 
 songList.push(songA);
