@@ -4,6 +4,7 @@ var pause = document.getElementById("pause");
 var load = document.getElementById("load");
 var skip = document.getElementById("skip");
 var random = document.getElementById("random")
+var stop = document.getElementById("stop");
 
 var song1 = document.getElementById("song1");
 var song2 = document.getElementById("song2");
@@ -158,6 +159,10 @@ play.addEventListener("click",function(){
 
 pause.addEventListener("click",function(){
 	jukeBox1.pauseSong();
+})
+
+stop.addEventListener("click",function(){
+	jukeBox1.stopSong();
 })
 
 
